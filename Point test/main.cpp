@@ -13,8 +13,7 @@ struct student
     char name[10];
     char sex[10];
     char class_name[10];
-    char program_type[10];
-    int phone_number[10];
+    char program_type[
 };
 
 int main(int argc, const char * argv[]) {
@@ -63,3 +62,19 @@ void menu_select()
 
     }
 }
+                      main(){
+                      FILE *fp;
+                      char ch;
+                      if((fp=fopen("d:\\jrzh\\example\\c1.txt","rt"))==NULL){
+                      printf("\nCannot open file strike any key exit!");
+                      getch();
+                      exit(1);
+                      }
+                      ch=fgetc(fp);
+                      while(ch!=EOF){
+                      putchar(ch);
+                      ch=fgetc(fp);
+                      }
+                      fclose(fp);
+                      } 
+
